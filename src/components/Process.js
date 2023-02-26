@@ -5,9 +5,9 @@ const Process = () => {
     <div className="container-xxl py-5">
       <div className="container">
         <div className="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
-          <h6 className="section-title bg-white text-center text-primary px-3">
+          <h4 className="bg-white text-center text-primary p-1 mb-1 rounded-circle">
             Process
-          </h6>
+          </h4>
           <h1 className="mb-5">3 Easy Steps</h1>
         </div>
         <div className="row gy-5 gx-4 justify-content-center">

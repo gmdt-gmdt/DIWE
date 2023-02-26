@@ -10,6 +10,7 @@ import Package from "./components/Package";
 import { Testimonial } from "./components/Testimonial";
 import Contact from "./components/Contact";
 import Team from "./components/Team";
+import Register from "./components/Register";
 
 const Router = () => {
   return (
@@ -23,6 +24,7 @@ const Router = () => {
       <Route path="/services" element={<ServicesPage />} />
       <Route path="/testimonial" element={<Testimonial />} />
       <Route path="/team" element={<Team />} />
+      <Route path="/register" element={<Register />} />
     </Routes>
   );
 };

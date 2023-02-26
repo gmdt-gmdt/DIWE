@@ -4,6 +4,13 @@ const Booking = () => {
   return (
     <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
       <div className="container">
+        <div className="text-center">
+          <h4 className="bg-white text-center text-primary p-1 mb-1 rounded-circle">
+            Booking
+          </h4>
+          <h1 className="mb-5">Booking process...</h1>
+        </div>
+
         <div className="booking p-5">
           <div className="row g-5 align-items-center">
             <div className="col-md-6 text-white">

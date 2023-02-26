@@ -5,7 +5,7 @@ const Contact = () => {
     <div className="container-xxl py-5">
       <div className="container">
         <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h4 className="section-title bg-white text-center text-primary px-3">
+          <h4 className="bg-white text-center text-primary p-1 mb-1 rounded-circle">
             Contact Us
           </h4>
           <h1 className="mb-5">Contact For Any Query</h1>

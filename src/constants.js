@@ -94,12 +94,42 @@ export const BLOGS = [
 ];
 
 export const SERVICES = [
-  { name: "worldwide", description: "Worldwide desc" },
-  { name: "adventures", description: "Adventures desc" },
-  { name: "food & drinks", description: "Food & Drinks desc" },
-  { name: "affordable hotels", description: "Affordable Hotels desc" },
-  { name: "affordable price", description: "Affordable Price desc" },
-  { name: "24/7 support", description: "24/7 support desc" },
+  {
+    name: "Hotel Reservation",
+    iconName: "fa-hotel",
+    description:
+      "Hotel Reservation kasd sed at elitr sed ipsum justo dolor sed clita amet diam",
+  },
+  {
+    name: "WorldWide Tours",
+    iconName: "fa-globe",
+    description:
+      "WorldWide Tours sed at elitr sed ipsum justo dolor sed clita amet diam",
+  },
+  {
+    name: "Travel Guides",
+    iconName: "fa-user",
+    description:
+      "Travel Guides sed at elitr sed ipsum justo dolor sed clita amet diam",
+  },
+  {
+    name: "Event Management",
+    iconName: "fa-cog",
+    description:
+      "Event Management at elitr sed ipsum justo dolor sed clita amet diam",
+  },
+  {
+    name: "24/7 Support",
+    iconName: "fa-spinner fa-spin",
+    description:
+      "24/7 support at elitr sed ipsum justo dolor sed clita amet diam",
+  },
+  {
+    name: "Adventures",
+    iconName: "fa-align-justify",
+    description:
+      "Adventures at elitr sed ipsum justo dolor sed clita amet diam",
+  },
 ];
 
 export const GALLERIES = [
@@ -154,5 +184,15 @@ export const GALLERIES = [
     name: "travel spot",
     country: "Maldive",
     image: "images/gallery-img-9.jpg",
+  },
+];
+
+export const GUIDES = [
+  {
+    firstName: "Name",
+    lastName: "Last Name",
+    designation: "Designation",
+    socialNetworks: ["fa-twitter on fa-square-o"],
+    image: "images/blog-1.jpg",
   },
 ];

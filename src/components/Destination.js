@@ -6,7 +6,7 @@ const Destination = () => {
     <div className="container-xxl py-5 destination">
       <div className="container">
         <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h4 className="section-title bg-white text-center text-primary px-3">
+          <h4 className="bg-white text-center text-primary p-1 mb-1 rounded-circle">
             Destination
           </h4>
           <h1 className="mb-5">Popular Destination</h1>
@@ -34,7 +34,8 @@ const Destination = () => {
               </p>
             </div> */
             <div
-              className="col-lg-4 col-md-6 wow fadeInUp"
+              key={destination.name}
+              className="col-lg-4 col-md-6 wow fadeInUp shadow-lg p-3 mb-7 rounded"
               data-wow-delay="0.5s"
             >
               <div className="package-item">
@@ -43,7 +44,7 @@ const Destination = () => {
                     className="img-fluid"
                     src={destination.image}
                     alt=""
-                    style={{ height: 200, width: 400 }}
+                    style={{ height: 200, width: 300 }}
                   />
                 </div>
                 <div className="d-flex border-bottom">

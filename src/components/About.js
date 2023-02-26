@@ -20,15 +20,16 @@ const About = () => {
             </div>
           </div>
           <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-            <h4 className="section-title bg-white text-start text-primary pe-3">
+            <h4 className="bg-white text-center text-primary p-1 mb-1 rounded-circle">
               About Us
             </h4>
             <h1 className="mb-4">
               Welcome to <span className="text-primary">Tourist</span>
             </h1>
             <p className="mb-4">
-              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-              diam amet diam et eos. Clita erat ipsum et lorem et sit.
+              Github: https://github.com/gmdt-gmdt/DIWE.git Tempor erat elitr
+              rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
+              eos. Clita erat ipsum et lorem et sit.
             </p>
             <p className="mb-4">
               Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu

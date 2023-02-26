@@ -63,12 +63,12 @@ const Navbar = () => {
                 Contact
               </Link>
             </div>
-            <p
-              onClick={() => {}}
+            <Link
+              to="/register"
               className="btn btn-primary rounded-pill py-2 px-4"
             >
               Register
-            </p>
+            </Link>
           </div>
         </nav>
       </div>
