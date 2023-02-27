@@ -1,15 +1,11 @@
 import React from "react";
+import RubricTitle from "../molecules/RubricTitle";
 
 export const Testimonial = () => {
   return (
     <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
       <div className="container">
-        <div className="text-center">
-          <h4 className="bg-white text-center text-primary p-1 mb-1 rounded-circle">
-            Testimonial
-          </h4>
-          <h1 className="mb-5">Our Clients Say!!!</h1>
-        </div>
+        <RubricTitle title="Testimonial" subTitle="Our Clients Say!!!" />
         <div className="owl-carousel testimonial-carousel position-relative">
           <div className="testimonial-item bg-white text-center border p-4">
             <img

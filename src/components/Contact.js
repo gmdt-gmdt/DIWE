@@ -1,15 +1,11 @@
 import React from "react";
+import RubricTitle from "../molecules/RubricTitle";
 
 const Contact = () => {
   return (
     <div className="container-xxl py-5">
       <div className="container">
-        <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h4 className="bg-white text-center text-primary p-1 mb-1 rounded-circle">
-            Contact Us
-          </h4>
-          <h1 className="mb-5">Contact For Any Query</h1>
-        </div>
+        <RubricTitle title="Contact Us" subTitle="Contact For Any Query" />
         <div className="row g-4">
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <h5>Get In Touch</h5>
@@ -26,7 +22,7 @@ const Contact = () => {
               </div>
               <div className="ms-3">
                 <h5 className="text-primary">Office</h5>
-                <p className="mb-0">Location, City, Country</p>
+                <p className="mb-0">Location, Cotonou, Benin</p>
               </div>
             </div>
             <div className="d-flex align-items-center mb-4">

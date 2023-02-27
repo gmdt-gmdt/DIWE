@@ -1,16 +1,12 @@
 import React from "react";
 import { SERVICES } from "../constants";
+import RubricTitle from "../molecules/RubricTitle";
 
 const ServicesPage = () => {
   return (
     <div className="container-xxl py-5">
       <div className="container">
-        <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h4 className="bg-white text-center text-primary p-1 mb-1 rounded-circle">
-            Services
-          </h4>
-          <h1 className="mb-5">Our Services</h1>
-        </div>
+        <RubricTitle title="Services" subTitle="Our Services" />
         <div className="row g-4">
           {SERVICES.map((service) => (
             <div

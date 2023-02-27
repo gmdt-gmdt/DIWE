@@ -1,15 +1,11 @@
 import React from "react";
+import RubricTitle from "../molecules/RubricTitle";
 
 export const Team = () => {
   return (
     <div className="container-xxl py-5">
       <div className="container">
-        <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h4 className="bg-white text-center text-primary p-1 mb-1 rounded-circle">
-            Travel Guide
-          </h4>
-          <h1 className="mb-5">Meet Our Guide</h1>
-        </div>
+        <RubricTitle title="Travel Guide" subTitle="Meet Our Guide" />
         <div className="row g-4">
           <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div className="team-item">

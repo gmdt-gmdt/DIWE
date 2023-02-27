@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Topbar = () => {
+const TopBar = () => {
   return (
     <div className="container-fluid bg-dark px-5 d-none d-lg-block">
       <div className="row gx-0">
@@ -26,36 +27,36 @@ const Topbar = () => {
             className="d-inline-flex align-items-center"
             style={{ height: 45 }}
           >
-            <a
+            <Link
               className="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-              href=""
+              to=""
             >
               <i className="fab fa-twitter fw-normal"></i>
-            </a>
-            <a
+            </Link>
+            <Link
               className="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-              href=""
+              to=""
             >
               <i className="fab fa-facebook-f fw-normal"></i>
-            </a>
-            <a
+            </Link>
+            <Link
               className="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-              href=""
+              to=""
             >
               <i className="fab fa-linkedin-in fw-normal"></i>
-            </a>
-            <a
+            </Link>
+            <Link
               className="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-              href=""
+              to=""
             >
               <i className="fab fa-instagram fw-normal"></i>
-            </a>
-            <a
+            </Link>
+            <Link
               className="btn btn-sm btn-outline-light btn-sm-square rounded-circle"
-              href=""
+              to=""
             >
               <i className="fab fa-youtube fw-normal"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -63,4 +64,4 @@ const Topbar = () => {
   );
 };
 
-export default Topbar;
+export default TopBar;

@@ -11,6 +11,7 @@ import { Testimonial } from "./components/Testimonial";
 import Contact from "./components/Contact";
 import Team from "./components/Team";
 import Register from "./components/Register";
+import Process from "./components/Process";
 
 const Router = () => {
   return (
@@ -25,6 +26,7 @@ const Router = () => {
       <Route path="/testimonial" element={<Testimonial />} />
       <Route path="/team" element={<Team />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/process" element={<Process />} />
       <Route path="*" element={<Home />} />
     </Routes>
   );

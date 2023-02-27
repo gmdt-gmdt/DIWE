@@ -1,38 +1,15 @@
 import React from "react";
 import { DESTINATIONS } from "../constants";
+import RubricTitle from "../molecules/RubricTitle";
 
 const Destination = () => {
   return (
     <div className="container-xxl py-5 destination">
       <div className="container">
-        <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h4 className="bg-white text-center text-primary p-1 mb-1 rounded-circle">
-            Destination
-          </h4>
-          <h1 className="mb-5">Popular Destination</h1>
-        </div>
+        <RubricTitle title="Destination" subTitle="Popular Destination" />
 
         <div className="row g-4">
           {DESTINATIONS.map((destination) => (
-            /* <div className="col-lg-3 col-md-3 wow zoomIn" data-wow-delay="0.5s">
-              <p
-                className="position-relative d-block overflow-hidden"
-                onClick={() => {}}
-              >
-                <img
-                  className="img-fluid"
-                  src={destination.image}
-                  alt={destination.name}
-                  style={{ height: 200, width: 400 }}
-                />
-                <div className="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
-                  35% OFF
-                </div>
-                <div className="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
-                  {destination.name}
-                </div>
-              </p>
-            </div> */
             <div
               key={destination.name}
               className="col-lg-4 col-md-6 wow fadeInUp shadow-lg p-3 mb-7 rounded"
