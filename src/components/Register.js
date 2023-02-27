@@ -123,7 +123,7 @@ const Register = () => {
                     style={{ borderRadius: "0px 15px 15px 0px" }}
                   >
                     <div className="p-5">
-                      <h3 className="fw-normal mb-1">Contact Details</h3>
+                      <h3 className="fw-normal mb-1">Contact</h3>
 
                       <div className="mb-1 pb-2">
                         <div className="form-outline form-white">
