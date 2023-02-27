@@ -25,10 +25,7 @@ const Booking = () => {
                 Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
                 sed stet lorem sit clita duo justo magna dolore erat amet
               </p>
-              <p
-                className="btn btn-outline-light py-3 px-5 mt-2"
-                onClick={() => {}}
-              >
+              <p className="btn btn-primary py-3 px-5 mt-2" onClick={() => {}}>
                 Read More
               </p>
             </div>
@@ -42,6 +39,7 @@ const Booking = () => {
                         type="text"
                         className="form-control bg-transparent"
                         id="name"
+                        name="name"
                         placeholder="Your Name"
                       />
                       <label htmlFor="name">Your Name</label>
@@ -53,6 +51,7 @@ const Booking = () => {
                         type="email"
                         className="form-control bg-transparent"
                         id="email"
+                        name="email"
                         placeholder="Your Email"
                       />
                       <label htmlFor="email">Your Email</label>
@@ -101,7 +100,7 @@ const Booking = () => {
                   </div>
                   <div className="col-12">
                     <button
-                      className="btn btn-outline-light w-100 py-3"
+                      className="btn btn-primary w-100 py-3"
                       type="submit"
                     >
                       Book Now

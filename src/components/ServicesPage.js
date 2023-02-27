@@ -14,6 +14,7 @@ const ServicesPage = () => {
         <div className="row g-4">
           {SERVICES.map((service) => (
             <div
+              key={service.name}
               className="col-lg-3 col-sm-6 wow fadeInUp shadow-lg"
               data-wow-delay="0.1s"
             >

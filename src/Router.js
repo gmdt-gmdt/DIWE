@@ -25,6 +25,7 @@ const Router = () => {
       <Route path="/testimonial" element={<Testimonial />} />
       <Route path="/team" element={<Team />} />
       <Route path="/register" element={<Register />} />
+      <Route path="*" element={<Home />} />
     </Routes>
   );
 };

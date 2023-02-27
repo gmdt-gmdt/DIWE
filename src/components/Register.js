@@ -1,8 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Register = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    position: "",
+    business: "",
+    street: "",
+    additionalInfo: "",
+    zipCode: "",
+    place: "",
+    country: "",
+    code: "",
+    phoneNumber: "",
+    tc: false,
+  });
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(formData);
+    //Reset form
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      position: "",
+      business: "",
+      street: "",
+      additionalInfo: "",
+      zipCode: "",
+      place: "",
+      country: "",
+      code: "",
+      phoneNumber: "",
+      tc: false,
+    });
+  };
+  const handleChange = (event) => {
+    const { name, value, type } = event.target;
+    const isCheckbox = type === "checkbox";
+
+    setFormData({
+      ...formData,
+      [name]: isCheckbox ? event.target.checked : value,
+    });
+  };
+
   return (
-    <section className="h-100 gradient-custom-2">
+    <form onSubmit={handleSubmit}>
       <div className="container py-5 h-100">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-12">
@@ -19,20 +65,23 @@ const Register = () => {
                           <div className="form-outline">
                             <input
                               type="text"
-                              id="firstName"
+                              name="firstName"
+                              onChange={handleChange}
                               className="form-control form-control-lg"
                               placeholder="First name"
+                              value={FormData.firstName}
                             />
-                            {/* <label htmlFor="name"> First name</label> */}
                           </div>
                         </div>
                         <div className="col-md-6 mb-4 pb-2">
                           <div className="form-outline">
                             <input
                               type="text"
-                              id="lastName"
+                              name="lastName"
+                              onChange={handleChange}
                               className="form-control form-control-lg"
                               placeholder="Last name"
+                              value={formData.lastName}
                             />
                           </div>
                         </div>
@@ -43,8 +92,11 @@ const Register = () => {
                           <input
                             type="text"
                             id="position"
+                            name="position"
+                            onChange={handleChange}
                             className="form-control form-control-lg"
                             placeholder="Position"
+                            value={formData.position}
                           />
                         </div>
                       </div>
@@ -55,8 +107,11 @@ const Register = () => {
                             <input
                               type="text"
                               id="business"
+                              name="business"
+                              onChange={handleChange}
                               className="form-control form-control-lg"
                               placeholder=" Business Arena"
+                              value={formData.business}
                             />
                           </div>
                         </div>
@@ -75,8 +130,11 @@ const Register = () => {
                           <input
                             type="text"
                             id="street"
+                            name="street"
+                            onChange={handleChange}
                             className="form-control form-control-lg"
                             placeholder=" Street + Nr"
+                            value={formData.street}
                           />
                         </div>
                       </div>
@@ -86,8 +144,11 @@ const Register = () => {
                           <input
                             type="text"
                             id="additionalInfo"
+                            name="additionalInfo"
+                            onChange={handleChange}
                             className="form-control form-control-lg"
                             placeholder="Additional Information"
+                            value={formData.additionalInfo}
                           />
                         </div>
                       </div>
@@ -98,8 +159,11 @@ const Register = () => {
                             <input
                               type="text"
                               id="zipCode"
+                              name="zipCode"
+                              onChange={handleChange}
                               className="form-control form-control-lg"
                               placeholder="Zip Code"
+                              value={formData.zipCode}
                             />
                           </div>
                         </div>
@@ -108,8 +172,11 @@ const Register = () => {
                             <input
                               type="text"
                               id="place"
+                              name="place"
+                              onChange={handleChange}
                               className="form-control form-control-lg"
                               placeholder="Place"
+                              value={formData.place}
                             />
                           </div>
                         </div>
@@ -120,8 +187,11 @@ const Register = () => {
                           <input
                             type="text"
                             id="country"
+                            name="country"
+                            onChange={handleChange}
                             className="form-control form-control-lg"
                             placeholder="Country"
+                            value={formData.country}
                           />
                         </div>
                       </div>
@@ -132,8 +202,11 @@ const Register = () => {
                             <input
                               type="text"
                               id="code"
+                              name="code"
+                              onChange={handleChange}
                               className="form-control form-control-lg"
                               placeholder="Code +"
+                              value={formData.code}
                             />
                           </div>
                         </div>
@@ -142,8 +215,11 @@ const Register = () => {
                             <input
                               type="text"
                               id="phoneNumber"
+                              name="phoneNumber"
+                              onChange={handleChange}
                               className="form-control form-control-lg"
                               placeholder="Phone Number"
+                              value={formData.phoneNumber}
                             />
                           </div>
                         </div>
@@ -154,8 +230,11 @@ const Register = () => {
                           <input
                             type="text"
                             id="email"
+                            name="email"
+                            onChange={handleChange}
                             className="form-control form-control-lg"
                             placeholder="Your email"
+                            value={formData.email}
                           />
                         </div>
                       </div>
@@ -164,10 +243,15 @@ const Register = () => {
                         <input
                           className="form-check-input me-3"
                           type="checkbox"
-                          value=""
                           id="tc"
+                          name="tc"
+                          onChange={handleChange}
+                          value={formData.tc}
                         />
-                        <label className="form-check-label text-white" for="tc">
+                        <label
+                          className="form-check-label text-white"
+                          htmlFor="tc"
+                        >
                           I do accept the{" "}
                           <a href="#!" className="text-white">
                             <u>Terms and Conditions</u>
@@ -176,11 +260,7 @@ const Register = () => {
                         </label>
                       </div>
 
-                      <button
-                        type="button"
-                        className="btn btn-light btn-lg"
-                        data-mdb-ripple-color="dark"
-                      >
+                      <button type="submit" className="btn btn-light btn-lg">
                         Register
                       </button>
                     </div>
@@ -191,7 +271,7 @@ const Register = () => {
           </div>
         </div>
       </div>
-    </section>
+    </form>
   );
 };
 
