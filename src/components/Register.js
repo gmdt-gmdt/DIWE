@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addUserFromAPI } from "../store/actions/user-actions";
 
 const Register = () => {
+  const dispatch = useDispatch();
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -19,7 +23,8 @@ const Register = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formData);
+    dispatch(addUserFromAPI(formData));
+
     //Reset form
     setFormData({
       firstName: "",
