@@ -20,8 +20,6 @@ function Home() {
       <Booking />
       <Process />
       <Team />
-      <Footer />
-      <BackToTop />
     </>
   );
 }

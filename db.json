@@ -1,6 +1,40 @@
 {
   "users": [
     {
+      "firstName": "Toto",
+      "lastName": "Tata",
+      "email": "node.developer.gmdt@gmail.com",
+      "password": "gmdt..",
+      "position": "Pos",
+      "business": "BA",
+      "street": "stere",
+      "additionalInfo": "Ad",
+      "zipCode": "78200",
+      "place": "qsdqd",
+      "country": "France",
+      "code": "376727",
+      "phoneNumber": "0753540000",
+      "tc": true,
+      "id": 2
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "password": "",
+      "email": "",
+      "position": "",
+      "business": "",
+      "street": "",
+      "additionalInfo": "",
+      "zipCode": "",
+      "place": "",
+      "country": "",
+      "code": "",
+      "phoneNumber": "",
+      "tc": false,
+      "id": 3
+    },
+    {
       "firstName": "Mohamed",
       "lastName": "TRAORE",
       "email": "momogafou85@gmail.com",
@@ -14,23 +48,7 @@
       "code": "376727",
       "phoneNumber": "0753545355",
       "tc": true,
-      "id": 1
-    },
-    {
-      "firstName": "Toto",
-      "lastName": "Tata",
-      "email": "node.developer.gmdt@gmail.com",
-      "position": "Pos",
-      "business": "BA",
-      "street": "stere",
-      "additionalInfo": "Ad",
-      "zipCode": "78200",
-      "place": "qsdqd",
-      "country": "France",
-      "code": "376727",
-      "phoneNumber": "0753540000",
-      "tc": true,
-      "id": 2
+      "id": 4
     }
   ],
   "services": [
@@ -157,13 +175,48 @@
   ],
   "guides": [
     {
-      "firstName": "Name",
-      "lastName": "Last Name",
-      "designation": "Designation",
+      "firstName": "Name1",
+      "lastName": "Last1",
+      "designation": "Designation1",
       "socialNetworks": [
-        "fa-twitter on fa-square-o"
+        "fab fa-facebook-f",
+        "fab fa-twitter",
+        "fab fa-instagram"
       ],
-      "image": "images/blog-1.jpg"
+      "image": "images/team-1.jpg"
+    },
+    {
+      "firstName": "Name2",
+      "lastName": "Last2",
+      "designation": "Designation2",
+      "socialNetworks": [
+        "fab fa-facebook-f",
+        "fab fa-twitter",
+        "fab fa-instagram"
+      ],
+      "image": "images/team-2.jpg"
+    },
+    {
+      "firstName": "Name3",
+      "lastName": "Last3",
+      "designation": "Designation3",
+      "socialNetworks": [
+        "fab fa-facebook-f",
+        "fab fa-twitter",
+        "fab fa-instagram"
+      ],
+      "image": "images/team-3.jpg"
+    },
+    {
+      "firstName": "Name4",
+      "lastName": "Last4",
+      "designation": "Designation4",
+      "socialNetworks": [
+        "fab fa-facebook-f",
+        "fab fa-twitter",
+        "fab fa-instagram"
+      ],
+      "image": "images/team-4.jpg"
     }
   ],
   "galleries": [

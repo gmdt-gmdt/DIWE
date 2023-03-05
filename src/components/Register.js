@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
 import { addUserFromAPI } from "../store/actions/user-actions";
 
 const Register = () => {
+  const params = useParams();
+  console.log(params);
   const dispatch = useDispatch();
 
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
+    password: "",
     email: "",
     position: "",
     business: "",
@@ -29,6 +33,7 @@ const Register = () => {
     setFormData({
       firstName: "",
       lastName: "",
+      password: "",
       email: "",
       position: "",
       business: "",
@@ -92,21 +97,20 @@ const Register = () => {
                         </div>
                       </div>
 
-                      <div className="mb-4 pb-2">
-                        <div className="form-outline">
-                          <input
-                            type="text"
-                            id="position"
-                            name="position"
-                            onChange={handleChange}
-                            className="form-control form-control-lg"
-                            placeholder="Position"
-                            value={formData.position}
-                          />
+                      <div className="row pb-4">
+                        <div className="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+                          <div className="form-outline">
+                            <input
+                              type="text"
+                              id="password"
+                              name="password"
+                              onChange={handleChange}
+                              className="form-control form-control-lg"
+                              placeholder="Password"
+                              value={formData.password}
+                            />
+                          </div>
                         </div>
-                      </div>
-
-                      <div className="row">
                         <div className="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
                           <div className="form-outline">
                             <input
@@ -119,6 +123,20 @@ const Register = () => {
                               value={formData.business}
                             />
                           </div>
+                        </div>
+                      </div>
+
+                      <div className="mb-4 pb-2">
+                        <div className="form-outline">
+                          <input
+                            type="text"
+                            id="position"
+                            name="position"
+                            onChange={handleChange}
+                            className="form-control form-control-lg"
+                            placeholder="Position"
+                            value={formData.position}
+                          />
                         </div>
                       </div>
                     </div>

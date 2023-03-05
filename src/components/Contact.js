@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import { GEOLOCATION } from "../constants";
 import RubricTitle from "../molecules/RubricTitle";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(formData);
+    //dispatch(loginFromAPI(formData));
+    //Reset form
+    setFormData({ name: "", email: "", subject: "", message: "" });
+  };
+
   return (
     <div className="container-xxl py-5">
       <div className="container">
@@ -54,27 +75,28 @@ const Contact = () => {
             <iframe
               title="Welcome"
               className="position-relative rounded w-100 min-vh-70 d-flex"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-              frameborder="0"
-              style={{ minHeight: 300, border: 0 }}
-              allowfullscreen=""
+              src={GEOLOCATION}
+              style={{ minHeight: 300, border: "none" }}
+              allowFullScreen=""
               aria-hidden="false"
-              tabindex="0"
+              tabIndex="0"
             ></iframe>
           </div>
           <div
             className="col-lg-4 col-md-12 wow fadeInUp"
             data-wow-delay="0.5s"
           >
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="row g-3">
                 <div className="col-md-6">
                   <div className="form-floating">
                     <input
                       type="text"
                       className="form-control"
-                      id="name"
+                      name="name"
                       placeholder="Your Name"
+                      onChange={handleChange}
+                      value={formData.name}
                     />
                     <label htmlFor="name">Your Name</label>
                   </div>
@@ -84,8 +106,10 @@ const Contact = () => {
                     <input
                       type="email"
                       className="form-control"
-                      id="email"
-                      placeholder="Your Email"
+                      placeholder="Enter email"
+                      name="email"
+                      onChange={handleChange}
+                      value={formData.email}
                     />
                     <label htmlFor="email">Your Email</label>
                   </div>
@@ -95,8 +119,10 @@ const Contact = () => {
                     <input
                       type="text"
                       className="form-control"
-                      id="subject"
+                      name="subject"
                       placeholder="Subject"
+                      onChange={handleChange}
+                      value={formData.subject}
                     />
                     <label htmlFor="subject">Subject</label>
                   </div>
@@ -106,12 +132,22 @@ const Contact = () => {
                     <textarea
                       className="form-control h-300"
                       placeholder="Leave a message here"
-                      id="message"
+                      name="message"
                       style={{ height: 100 }}
+                      onChange={handleChange}
+                      value={formData.message}
                     ></textarea>
                     <label htmlFor="message">Message</label>
                   </div>
                 </div>
+                {/* <JoditEditor
+                  config={config}
+                  ref={editor}
+                  value={content}
+                  onBlur={handleUpdate}
+                  onChange={(newContent) => {}}
+                /> */}
+
                 <div className="col-12">
                   <button className="btn btn-primary w-100 py-3" type="submit">
                     Send Message

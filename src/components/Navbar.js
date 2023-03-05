@@ -1,7 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { logoutFromAPI, getCurrentUser } from "../store/actions/auth-actions";
 
 const Navbar = () => {
+  const dispatch = useDispatch();
+  const currentUser = useSelector((state) => state.auth);
+  const currentToken = getCurrentUser();
+  const access = currentToken || (currentUser && currentUser.isAuthenticated);
+
+  const logout = () => dispatch(logoutFromAPI());
+
+  const RegisterLink = () => (
+    <Link to="/register" className="btn btn-primary rounded-pill py-2 px-4">
+      Register
+    </Link>
+  );
+  const Logout = () => (
+    <p className="btn bg-primary rounded-pill py-2 px-4" onClick={logout}>
+      Logout
+    </p>
+  );
+
   return (
     <>
       <div className="container-fluid position-relative p-5">
@@ -63,12 +83,14 @@ const Navbar = () => {
                 Contact
               </Link>
             </div>
-            <Link
+            {/* <Link
               to="/register"
               className="btn btn-primary rounded-pill py-2 px-4"
             >
               Register
-            </Link>
+            </Link> */}
+            {access && <Logout />}
+            {!access && <RegisterLink />}
           </div>
         </nav>
       </div>

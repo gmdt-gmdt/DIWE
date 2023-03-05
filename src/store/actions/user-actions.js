@@ -6,6 +6,8 @@ import {
   setUserData,
 } from "../slices/user-slice";
 import { API_BASE_URL } from "../../config";
+//import jwt from 'jwt-decode' // import dependency
+
 export const getUsersDataFromAPI = () => {
   return async (dispatch) => {
     const getUsers = async () => {

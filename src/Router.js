@@ -12,6 +12,7 @@ import Contact from "./components/Contact";
 import Team from "./components/Team";
 import Register from "./components/Register";
 import Process from "./components/Process";
+import Login from "./components/Login";
 
 const Router = () => {
   return (
@@ -27,6 +28,7 @@ const Router = () => {
       <Route path="/team" element={<Team />} />
       <Route path="/register" element={<Register />} />
       <Route path="/process" element={<Process />} />
+      <Route path="/login" element={<Login />} />
       <Route path="*" element={<Home />} />
     </Routes>
   );

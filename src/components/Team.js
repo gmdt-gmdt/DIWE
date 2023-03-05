@@ -1,112 +1,51 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import RubricTitle from "../molecules/RubricTitle";
+import { getGuidesDataFromAPI } from "../store/actions/guides-actions";
 
 export const Team = () => {
+  const dispatch = useDispatch();
+  const teams = useSelector((state) => state.guides.guides);
+  useEffect(() => {
+    dispatch(getGuidesDataFromAPI());
+  }, [dispatch]);
+
   return (
     <div className="container-xxl py-5">
       <div className="container">
-        <RubricTitle title="Travel Guide" subTitle="Meet Our Guide" />
+        <RubricTitle title="Travel Guides" subTitle="Meet Our Guides" />
         <div className="row g-4">
-          <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div className="team-item">
-              <div className="overflow-hidden">
-                <img className="img-fluid" src="images/team-1.jpg" alt="" />
-              </div>
-              <div
-                className="position-relative d-flex justify-content-center"
-                style={{ marginTop: -19 }}
-              >
-                <p className="btn btn-square mx-1" onClick={() => {}}>
-                  <i className="fab fa-facebook-f"></i>
-                </p>
-                <p className="btn btn-square mx-1" onClick={() => {}}>
-                  <i className="fab fa-twitter"></i>
-                </p>
-                <p className="btn btn-square mx-1" onClick={() => {}}>
-                  <i className="fab fa-instagram"></i>
-                </p>
-              </div>
-              <div className="text-center p-4">
-                <h5 className="mb-0">Full Name</h5>
-                <small>Designation</small>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-            <div className="team-item">
-              <div className="overflow-hidden">
-                <img className="img-fluid" src="images/team-2.jpg" alt="" />
-              </div>
-              <div
-                className="position-relative d-flex justify-content-center"
-                style={{ marginTop: -19 }}
-              >
-                <p className="btn btn-square mx-1" onClick={() => {}}>
-                  <i className="fab fa-facebook-f"></i>
-                </p>
-                <p className="btn btn-square mx-1" onClick={() => {}}>
-                  <i className="fab fa-twitter"></i>
-                </p>
-                <p className="btn btn-square mx-1" onClick={() => {}}>
-                  <i className="fab fa-instagram"></i>
-                </p>
-              </div>
-              <div className="text-center p-4">
-                <h5 className="mb-0">Full Name</h5>
-                <small>Designation</small>
+          {teams.map((team, i) => (
+            <div
+              key={team.image}
+              className="col-lg-3 col-md-6 wow fadeInUp"
+              data-wow-delay="0.7s"
+            >
+              <div className="team-item">
+                <div className="overflow-hidden">
+                  <img className="img-fluid" src={team.image} alt={i} />
+                </div>
+                <div
+                  className="position-relative d-flex justify-content-center"
+                  style={{ marginTop: -19 }}
+                >
+                  {team.socialNetworks.map((socialNetwork) => (
+                    <p
+                      className="btn btn-square mx-1"
+                      onClick={() => {}}
+                      key={socialNetwork}
+                    >
+                      <i className={socialNetwork}></i>
+                    </p>
+                  ))}
+                </div>
+                <div className="text-center p-4">
+                  <h5 className="mb-0">{`${team.firstName} ${team.lastName}`}</h5>
+                  <small>{team.designation}</small>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-            <div className="team-item">
-              <div className="overflow-hidden">
-                <img className="img-fluid" src="images/team-3.jpg" alt="" />
-              </div>
-              <div
-                className="position-relative d-flex justify-content-center"
-                style={{ marginTop: -19 }}
-              >
-                <p className="btn btn-square mx-1" onClick={() => {}}>
-                  <i className="fab fa-facebook-f"></i>
-                </p>
-                <p className="btn btn-square mx-1" onClick={() => {}}>
-                  <i className="fab fa-twitter"></i>
-                </p>
-                <p className="btn btn-square mx-1" onClick={() => {}}>
-                  <i className="fab fa-instagram"></i>
-                </p>
-              </div>
-              <div className="text-center p-4">
-                <h5 className="mb-0">Full Name</h5>
-                <small>Designation</small>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-            <div className="team-item">
-              <div className="overflow-hidden">
-                <img className="img-fluid" src="images/team-4.jpg" alt="" />
-              </div>
-              <div
-                className="position-relative d-flex justify-content-center"
-                style={{ marginTop: -19 }}
-              >
-                <p className="btn btn-square mx-1" onClick={() => {}}>
-                  <i className="fab fa-facebook-f"></i>
-                </p>
-                <p className="btn btn-square mx-1" onClick={() => {}}>
-                  <i className="fab fa-twitter"></i>
-                </p>
-                <p className="btn btn-square mx-1" onClick={() => {}}>
-                  <i className="fab fa-instagram"></i>
-                </p>
-              </div>
-              <div className="text-center p-4">
-                <h5 className="mb-0">Full Name</h5>
-                <small>Designation</small>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

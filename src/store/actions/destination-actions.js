@@ -6,6 +6,7 @@ import {
   setDestinationsData,
 } from "../slices/destination-slice";
 import { API_BASE_URL } from "../../config";
+import { toast } from "react-toastify";
 
 export const getDestinationsDataFromAPI = () => {
   return async (dispatch) => {
@@ -17,6 +18,10 @@ export const getDestinationsDataFromAPI = () => {
       const destinations = await getDestinations();
       dispatch(setDestinationsData(destinations));
     } catch (error) {
+      toast.error("Fetch destinations data failed 🚨", {
+        toastId: "id",
+      });
+
       console.error(error);
     }
   };

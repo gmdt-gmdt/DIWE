@@ -15,11 +15,12 @@ export const usersSlice = createSlice({
         return pic.id === payload.id ? { ...pic, ...payload } : pic;
       });
     },
+
     deleteUser: (state, { payload }) => {
       state.users = state.users.filter((pic) => pic.id !== payload);
     },
   },
 });
-export const { setUserData, addUser, editUser, deleteUser } =
+export const { setUserData, addUser, editUser, deleteUser, loginUser } =
   usersSlice.actions;
 export default usersSlice.reducer;

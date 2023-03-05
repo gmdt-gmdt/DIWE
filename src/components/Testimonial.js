@@ -6,7 +6,7 @@ export const Testimonial = () => {
     <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
       <div className="container">
         <RubricTitle title="Testimonial" subTitle="Our Clients Say!!!" />
-        <div className="owl-carousel testimonial-carousel position-relative">
+        <div className="testimonial-carousel position-relative">
           <div className="testimonial-item bg-white text-center border p-4">
             <img
               className="bg-white rounded-circle shadow p-1 mx-auto mb-3"
