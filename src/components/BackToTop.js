@@ -1,14 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const BackToTop = () => {
   return (
-    <Link
-      to="/home"
+    <p
+      onClick={() => window.scrollTo(0, 0)}
       className="btn btn-lg btn-primary btn-lg-square back-to-top"
     >
       <i className="bi bi-arrow-up"></i>
-    </Link>
+    </p>
   );
 };
 
