@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { getPackagesDataFromAPI } from "../store/actions/package-actions";
 
 const Footer = () => {
+  const dispatch = useDispatch();
+  const packages = useSelector((state) => state.package.packages);
+  useEffect(() => {
+    dispatch(getPackagesDataFromAPI());
+  }, [dispatch]);
+
+  const LINKS = [
+    { name: "About Us", to: "/about" },
+    { name: "Contact Us", to: "/contact" },
+    { name: "Privacy Policy", to: "/privacy" },
+    { name: "FAQs & Help", to: "/faq" },
+  ];
   return (
     <div
       className="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn"
@@ -11,22 +25,11 @@ const Footer = () => {
         <div className="row g-5">
           <div className="col-lg-3 col-md-6">
             <h4 className="text-white mb-3">Company</h4>
-            <Link className="btn btn-link" to="/about">
-              About Us
-            </Link>
-            <Link className="btn btn-link" to="/contact">
-              Contact Us
-            </Link>
-            {/* todo: create privacy && TC && faq pages */}
-            <Link className="btn btn-link" to="/contact">
-              Privacy Policy
-            </Link>
-            <Link className="btn btn-link" to="/term-and-condition">
-              Terms & Condition
-            </Link>
-            <Link className="btn btn-link" to="/faq">
-              FAQs & Help
-            </Link>
+            {LINKS.map(({ to, name }) => (
+              <Link className="btn btn-link" to={to} key={name}>
+                {name}
+              </Link>
+            ))}
           </div>
           <div className="col-lg-3 col-md-6">
             <h4 className="text-white mb-3">Contact</h4>
@@ -70,48 +73,15 @@ const Footer = () => {
           <div className="col-lg-3 col-md-6">
             <h4 className="text-white mb-3">Gallery</h4>
             <div className="row g-2 pt-2">
-              <div className="col-4">
-                <img
-                  className="img-fluid bg-light p-1"
-                  src="images/package-1.jpg"
-                  alt=""
-                />
-              </div>
-              <div className="col-4">
-                <img
-                  className="img-fluid bg-light p-1"
-                  src="images/package-2.jpg"
-                  alt=""
-                />
-              </div>
-              <div className="col-4">
-                <img
-                  className="img-fluid bg-light p-1"
-                  src="images/package-3.jpg"
-                  alt=""
-                />
-              </div>
-              <div className="col-4">
-                <img
-                  className="img-fluid bg-light p-1"
-                  src="images/package-2.jpg"
-                  alt=""
-                />
-              </div>
-              <div className="col-4">
-                <img
-                  className="img-fluid bg-light p-1"
-                  src="images/package-3.jpg"
-                  alt=""
-                />
-              </div>
-              <div className="col-4">
-                <img
-                  className="img-fluid bg-light p-1"
-                  src="images/package-1.jpg"
-                  alt=""
-                />
-              </div>
+              {packages.map((pack, i) => (
+                <div className="col-4" key={pack.location}>
+                  <img
+                    className="img-fluid bg-light p-1"
+                    src={pack.image}
+                    alt={`${pack.location}-${i}`}
+                  />
+                </div>
+              ))}
             </div>
           </div>
           <div className="col-lg-3 col-md-6">

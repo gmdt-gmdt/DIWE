@@ -255,5 +255,34 @@
       "country": "Maldive",
       "image": "images/gallery-img-9.jpg"
     }
+  ],
+  "packages": [
+    {
+      "location": "Thailand",
+      "duration": "3 days",
+      "visitNumber": "2 Person",
+      "description": "A-Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, natus!",
+      "published": "21st may, 2021",
+      "amount": "$149.00",
+      "image": "images/package-1.jpg"
+    },
+    {
+      "location": "Indonesia",
+      "duration": "7 days",
+      "visitNumber": "10 Person",
+      "description": "B-Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, natus!",
+      "published": "11st may, 2021",
+      "amount": "$179.00",
+      "image": "images/package-2.jpg"
+    },
+    {
+      "location": "Malaysia",
+      "duration": "15 days",
+      "visitNumber": "7 Person",
+      "description": "C-Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, natus!",
+      "published": "01st may, 2021",
+      "amount": "$279.00",
+      "image": "images/package-3.jpg"
+    }
   ]
 }

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import RubricTitle from "../molecules/RubricTitle";
-import { getGuidesDataFromAPI } from "../store/actions/guides-actions";
+import { getGuidesDataFromAPI } from "../store/actions/guide-actions";
 
 export const Team = () => {
   const dispatch = useDispatch();

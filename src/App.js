@@ -24,6 +24,7 @@ function App() {
       dispatch(logoutFromAPI());
       navigate("/login");
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [access, dispatch]);
 
   return (
