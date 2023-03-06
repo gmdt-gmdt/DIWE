@@ -37,7 +37,6 @@ html {
   scroll-padding-top: 9rem;
 }
 
-/*# sourceMappingURL=style.css.map */
 /* start register */
 @media (min-width: 1025px) {
   .h-custom {
@@ -59,11 +58,11 @@ html {
   background: #a1c4fd;
 
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(
+  /* background: -webkit-linear-gradient(
     to right,
     rgba(161, 196, 253, 1),
     rgba(194, 233, 251, 1)
-  );
+  ); */
 
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient(

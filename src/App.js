@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from "react";
+import React, { useEffect } from "react";
 
 import "./App.css";
 import Navbar from "./components/Navbar";
@@ -16,18 +16,15 @@ function App() {
   const access = currentToken || (currentUser && currentUser.isAuthenticated);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const logOut = useCallback(() => {
-    dispatch(logoutFromAPI());
-  }, [dispatch]);
 
   useEffect(() => {
     if (access) {
-      navigate("/");
+      navigate("/home");
     } else {
-      logOut();
+      dispatch(logoutFromAPI());
       navigate("/login");
     }
-  }, [access]);
+  }, [access, dispatch]);
 
   return (
     <>

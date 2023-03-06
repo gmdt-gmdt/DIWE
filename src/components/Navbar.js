@@ -11,17 +11,6 @@ const Navbar = () => {
 
   const logout = () => dispatch(logoutFromAPI());
 
-  const RegisterLink = () => (
-    <Link to="/register" className="btn btn-primary rounded-pill py-2 px-4">
-      Register
-    </Link>
-  );
-  const Logout = () => (
-    <p className="btn bg-primary rounded-pill py-2 px-4" onClick={logout}>
-      Logout
-    </p>
-  );
-
   return (
     <>
       <div className="container-fluid position-relative p-5">
@@ -89,8 +78,22 @@ const Navbar = () => {
             >
               Register
             </Link> */}
-            {access && <Logout />}
-            {!access && <RegisterLink />}
+            {access && (
+              <p
+                className="btn bg-primary rounded-pill py-2 px-4"
+                onClick={logout}
+              >
+                Logout
+              </p>
+            )}
+            {!access && (
+              <Link
+                to="/register"
+                className="btn btn-primary rounded-pill py-2 px-4"
+              >
+                Register
+              </Link>
+            )}
           </div>
         </nav>
       </div>

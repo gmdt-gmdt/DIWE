@@ -17,23 +17,7 @@
       "tc": true,
       "id": 2
     },
-    {
-      "firstName": "",
-      "lastName": "",
-      "password": "",
-      "email": "",
-      "position": "",
-      "business": "",
-      "street": "",
-      "additionalInfo": "",
-      "zipCode": "",
-      "place": "",
-      "country": "",
-      "code": "",
-      "phoneNumber": "",
-      "tc": false,
-      "id": 3
-    },
+
     {
       "firstName": "Mohamed",
       "lastName": "TRAORE",

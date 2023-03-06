@@ -29,7 +29,7 @@ const Router = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/process" element={<Process />} />
       <Route path="/login" element={<Login />} />
-      <Route path="*" element={<Home />} />
+      {/* <Route path="*" element={<Home />} /> */}
     </Routes>
   );
 };
