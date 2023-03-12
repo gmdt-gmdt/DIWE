@@ -11,14 +11,14 @@ const TopBar = () => {
             style={{ height: 45 }}
           >
             <small className="me-3 text-light">
-              <i className="fa fa-map-marker-alt me-2"></i>Location, City,
-              Country
+              <i className="fa fa-map-marker-alt me-2"></i>Location, Cotonou,
+              Benin
             </small>
             <small className="me-3 text-light">
               <i className="fa fa-phone-alt me-2"></i>+012 345 6789
             </small>
             <small className="text-light">
-              <i className="fa fa-envelope-open me-2"></i>info@example.com
+              <i className="fa fa-envelope-open me-2"></i>info@diwe.com
             </small>
           </div>
         </div>

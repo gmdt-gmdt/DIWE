@@ -32,15 +32,15 @@ const Package = () => {
                   </small>
                   <small className="flex-fill text-center border-end py-2">
                     <i className="fa fa-calendar-alt text-primary me-2"></i>
-                    {pack.duration}
+                    {pack.duration} Days
                   </small>
                   <small className="flex-fill text-center py-2">
                     <i className="fa fa-user text-primary me-2"></i>
-                    {pack.visitNumber}
+                    {pack.visitNumber} Pesons
                   </small>
                 </div>
                 <div className="text-center p-4">
-                  <h3 className="mb-0">$189.00</h3>
+                  <h3 className="mb-0">${pack.amount}</h3>
                   <div className="mb-3">
                     <small className="fa fa-star text-primary"></small>
                     <small className="fa fa-star text-primary"></small>
