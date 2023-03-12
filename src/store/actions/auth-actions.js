@@ -2,6 +2,7 @@ import axios from "axios";
 import { API_BASE_URL } from "../../config";
 import { login, logout } from "../slices/auth-slice";
 import jwt from "jwt-decode"; // import dependency
+import { toast } from "react-toastify";
 
 //Auth
 export const loginFromAPI = (data) => {
@@ -14,6 +15,7 @@ export const loginFromAPI = (data) => {
       localStorage.setItem("token", tokenDecoded);
       dispatch(login(tokenDecoded));
     } catch (error) {
+      toast.error("Login failed");
       console.error(error);
     }
   };
