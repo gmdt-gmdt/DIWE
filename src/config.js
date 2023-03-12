@@ -1,4 +1,4 @@
-export const API_BASE_URL = "http://localhost:8800/api";
+export const API_BASE_URL = "https://diwe-mern.onrender.com/api";
 export const TOAST_OPTIONS = {
   position: "top-center",
   autoClose: 5000,

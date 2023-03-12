@@ -11,7 +11,6 @@ export const loginFromAPI = (data) => {
       const { details } = response.data;
       const tokenFromApi = details.token;
       const tokenDecoded = jwt(tokenFromApi); // decode your token here
-      console.log(tokenDecoded);
       localStorage.setItem("token", tokenDecoded);
       dispatch(login(tokenDecoded));
     } catch (error) {
