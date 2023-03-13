@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useParams } from "react-router-dom";
 import { addUserFromAPI } from "../store/actions/user-actions";
 
 const Register = () => {
-  const params = useParams();
-  console.log(params);
   const dispatch = useDispatch();
 
   const [formData, setFormData] = useState({
+    username: "",
+    img: "",
+    city: "",
     firstName: "",
     lastName: "",
     password: "",
@@ -21,8 +21,9 @@ const Register = () => {
     place: "",
     country: "",
     code: "",
-    phoneNumber: "",
+    phone: "",
     tc: false,
+    isAdmin: false,
   });
 
   const handleSubmit = (event) => {
@@ -31,6 +32,9 @@ const Register = () => {
 
     //Reset form
     setFormData({
+      username: "",
+      img: "",
+      city: "",
       firstName: "",
       lastName: "",
       password: "",
@@ -43,8 +47,9 @@ const Register = () => {
       place: "",
       country: "",
       code: "",
-      phoneNumber: "",
+      phone: "",
       tc: false,
+      isAdmin: false,
     });
   };
   const handleChange = (event) => {
@@ -92,6 +97,32 @@ const Register = () => {
                               className="form-control form-control-lg"
                               placeholder="Last name"
                               value={formData.lastName}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="row">
+                        <div className="col-md-6 mb-4 pb-2">
+                          <div className="form-outline">
+                            <input
+                              type="text"
+                              name="username"
+                              onChange={handleChange}
+                              className="form-control form-control-lg"
+                              placeholder="User name"
+                              value={FormData.username}
+                            />
+                          </div>
+                        </div>
+                        <div className="col-md-6 mb-4 pb-2">
+                          <div className="form-outline">
+                            <input
+                              type="text"
+                              name="city"
+                              onChange={handleChange}
+                              className="form-control form-control-lg"
+                              placeholder="City"
+                              value={formData.city}
                             />
                           </div>
                         </div>
@@ -237,12 +268,12 @@ const Register = () => {
                           <div className="form-outline form-white">
                             <input
                               type="text"
-                              id="phoneNumber"
-                              name="phoneNumber"
+                              id="phone"
+                              name="phone"
                               onChange={handleChange}
                               className="form-control form-control-lg"
                               placeholder="Phone Number"
-                              value={formData.phoneNumber}
+                              value={formData.phone}
                             />
                           </div>
                         </div>

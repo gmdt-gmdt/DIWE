@@ -14,6 +14,8 @@ export const loginFromAPI = (data) => {
       const tokenDecoded = jwt(tokenFromApi); // decode your token here
       localStorage.setItem("token", tokenDecoded);
       dispatch(login(tokenDecoded));
+
+      toast.success("Successfully logged in");
     } catch (error) {
       toast.error("Login failed");
       console.error(error);
